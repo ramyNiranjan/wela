@@ -1,9 +1,39 @@
-body {
-  background: #0c354e;
+@media (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+    background: #0c354e;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+  }
+  .wela {
+    animation: fall linear forwards;
+    position: absolute;
+    border-radius: 50%;
+    top: -50px;
+    width: 40px;
+    height: 40px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fa-snowflake {
+    color: #fff;
+    animation: fall linear forwards;
+    position: absolute;
+    top: -50px;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh);
+    }
+  }
 }
 
-body {
+/* body {
   overflow: hidden;
+  background: #0c354e;
 }
 .wela {
   animation: fall linear forwards;
@@ -27,4 +57,4 @@ body {
   to {
     transform: translateY(110vh);
   }
-}
+} */
