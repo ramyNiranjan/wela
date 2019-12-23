@@ -2,15 +2,29 @@ body {
   background: #0c354e;
 }
 
+body {
+  overflow: hidden;
+}
 .wela {
   animation: fall linear forwards;
   position: absolute;
   border-radius: 50%;
   top: -50px;
+  width: 40px;
+  height: 40px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fa-snowflake {
+  color: #fff;
+  animation: fall linear forwards;
+  position: absolute;
+  top: -50px;
 }
 
 @keyframes fall {
   to {
-    transform: translateY(100vh);
+    transform: translateY(110vh);
   }
 }

@@ -1,24 +1,28 @@
 
 
-
+const picArr = ['./wela1.jpg', './wela2.jpg', './wela3.jpg', './wela4.jpg', './wela5.jpg',]
 
 function snowFlak(){
     let wela=document.createElement('div');
+    let snowFlak=document.createElement('i');
     wela.classList.add('wela')
-    wela.style.background="url('./wela2.jpg')"
-    wela.style.height="50px"
-    wela.style.width="50px"
-    wela.style.backgroundPosition="top center"
-    wela.style.backgroundSize="cover"
-    wela.style.backgroundRepeat="no-repeat"
+    snowFlak.classList.add('fas')
+    snowFlak.classList.add('fa-snowflake')
+    wela.style.backgroundImage = `url('${picArr[Math.floor((Math.random() * picArr.length))]}')` 
+  
     wela.style.left=Math.random()* window.innerWidth+'px'
-    wela.style.animationDuration=Math.random()* 3 +8 +'s'
-    // wela.style.clipPath ='polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)'
+    snowFlak.style.left=Math.random()* window.innerWidth+'px'
+    wela.style.animationDuration=Math.random()* 3 +6 +'s'
+    snowFlak.style.animationDuration=Math.random()* 3 +6 +'s'
+    snowFlak.style.opacity=Math.random()
+   
+  
     document.body.appendChild(wela)
+    document.body.appendChild(snowFlak)
 
     setTimeout(() => {
          wela.remove()
-    }, 8300);
+    }, 9000);
 }
 
 setInterval(snowFlak,100);
