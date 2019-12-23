@@ -1,0 +1,16 @@
+body {
+  background: #466274;
+}
+
+.wela {
+  animation: fall linear forwards;
+  position: absolute;
+  border-radius: 50%;
+  top: -50px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
